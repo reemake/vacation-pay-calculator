@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class IncorrectSalaryExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(IncorrectSalaryException.class)
-    protected ResponseEntity<SomeException> handleThereIsNoSuchUserException() {
+    protected ResponseEntity<SomeException> handleIncorrectSalaryException() {
         return new ResponseEntity<>(new SomeException("Stated salary is incorrect"), HttpStatus.UNPROCESSABLE_ENTITY);
     }
 
